@@ -107,6 +107,7 @@ func main() {
 	r.HandleFunc("/books/{id}", deleteBook).Methods("DELETE")
 
 	// Start server
+	fmt.Print("Start_Server......................")
 	port := os.Getenv("PORT")
 	log.Fatal(http.ListenAndServe(":"+port, r))
 	// log.Fatal(http.ListenAndServe(":8000", r))
